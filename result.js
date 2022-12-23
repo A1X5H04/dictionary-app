@@ -17,7 +17,7 @@ function constructEndPoint() {
 
 function mappedResult(data) {
    let mappedResult = data.map((item) => {
-      return result.innerHTML = `
+      return result.innerHTML += `
           <div class="title">
           <h1 id="word">${item.word}</h1>
           <div class="phonetics-cont">
