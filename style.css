@@ -156,3 +156,23 @@ header {
 #description {
   margin: 30px 20px
 }
+
+media only screen and (max-width: 600px) {
+
+  .search-container {
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  .searchbar { height: auto; }
+  
+  .searchbar > input { font-size: 25px; padding: 5px 0px;}
+
+  .searchbar > i { font-size: 25px; }
+
+  #description {
+    font-size: 10px;
+    margin: 15px 10px;
+   }
+
+}
