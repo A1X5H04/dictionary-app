@@ -44,8 +44,10 @@ html, body {
 }
 
 #app {
+  position: relative;
   width: 100%;
   height: 100vh;
+  background: url('wall.jpg');
 }
 
 header {
@@ -112,9 +114,6 @@ header {
   border: none;
 }
 
-
-
-
 .searchbar > input:focus {
   outline: none;
 }
@@ -147,15 +146,70 @@ header {
   cursor: pointer;
 }
 
+.ph-x {
+  font-size: 10px;
+}
 
 .searchbar > i:hover {
   color: black;
 }
 
-
 #description {
   margin: 30px 20px
 }
+
+
+.notification-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  bottom: 0;
+  background: black;
+  color: white;
+  transform: translateY(5.3rem);
+  transition: 1s ease;
+  padding: 0px 25px;
+  box-shadow: 0px -2px 10px -6px black;
+}
+
+
+.panel-active {
+  transform: translateY(0);
+}
+
+#timeout-bar {
+  position: absolute;
+  bottom: 0 ;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+}
+
+#notify-icon {
+  font-size: 25px;
+  padding: 10px;
+  margin-right: 10px ;
+}
+
+#notify-content {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.noti-options {
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 10px;
+}
+
+.noti-options > i  {
+  font-size: 30px;
+}
+
+
 
 @media only screen and (max-width: 35.5em) {
 
