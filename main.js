@@ -79,7 +79,7 @@ const searchBtn = document.getElementById("search-btn");
             }
           }
 
-          searchInput.innerHTML = final_transcript;
+          searchInput.value = final_transcript;
         };
 
         
