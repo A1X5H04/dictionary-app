@@ -7,13 +7,7 @@
     <title>Dictionary App</title>
   </head>
   <body>
-<!--   <header>
-      <div class="hamburger-menu">
-        <i class="ph-list-bold"></i>
-      </div>
-      <div class="randomize-container">
-      </div>
-  </header> -->
+
     <div id="app">
     
     <div class="hero">
@@ -24,14 +18,22 @@
             <input id="input-search" type="text" placeholder="Search Dictionary">
             <label id="search-label"></label>
             <i id="mic-btn" class="ph-microphone-bold"></i>
-            <i id="search-btn" class="ph-magnifying-glass-bold"></i>
+            <i style="display: none;" id="stop-btn" class="ph-stop-circle-bold"></i>
+            <i id="search-btn" title="search query" class="ph-magnifying-glass-bold"></i>
           </div>
           <p id="description">Get a definition of the word your are looking for...</p>
         </div>
-    </div>
+    </div>  
+
+   
+
+        <div id="notify-panel" class="notification-panel">
+            <div id="notify-icon"></div>
+            <p id="notify-content">This is a message</p>
+            <!-- <div id="timeout-bar"></div> -->
+        </div>
     </div>
     
-
 
 
   </body>
@@ -39,5 +41,4 @@
       <script type="text/javascript" src="./autocomplete.js"></script>
       <script type="text/javascript" src="./main.js"></script>
 </html>
-
 
