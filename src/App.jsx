@@ -3,7 +3,7 @@ import Result from "./components/Result";
 import Home from "./components/Home";
 
 function App() {
-  const [searchTerm, setSearchTerm] = React.useState("great");
+  const [searchTerm, setSearchTerm] = React.useState("free");
   const [dicType, setDicType] = React.useState("classic");
   const [showResult, setShowResult] = React.useState(false);
 

@@ -28,13 +28,7 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
       <header></header>
       <main className="home-main">
         <div className="logo">
-          <img
-            width="50"
-            height="50"
-            src="https://img.icons8.com/ios-filled/50/book.png"
-            alt="book"
-          />
-          <h1>Dictionary.</h1>
+          <img width="250" src="./Logo.svg" alt="book" />
         </div>
         <div className="searchbar">
           <button className="btn-dictype" onClick={toggleDicType}>
