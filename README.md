@@ -28,7 +28,7 @@ Contributions are welcome! If you find a bug or have a feature request, please o
 
 ## Credits
 
-This app was built by [Your Name] using React and the following APIs:
+This app was built by A1X5H04 using React and the following APIs:
 
 - [Simple API](https://dictionaryapi.dev/)
 - [Urban Dictionary API (Unofficial)](https://rapidapi.com/community/api/urban-dictionary)
