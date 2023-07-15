@@ -60,7 +60,7 @@ function Result({ searchTerm, dicType, setShowResult }) {
                       <div>
                         <h3>ANTONYMS</h3>
                         <p>
-                          {meaning.antonym
+                          {meaning.antonyms.length > 0
                             ? meaning.antonyms.map((antonym) => antonym + ", ")
                             : "No antonyms found"}
                         </p>
@@ -68,7 +68,7 @@ function Result({ searchTerm, dicType, setShowResult }) {
                       <div>
                         <h3>SYNONYMS</h3>
                         <p>
-                          {meaning.synonym
+                          {meaning.synonyms.length > 0
                             ? meaning.synonyms.map((synonym) => synonym + ", ")
                             : "No synonyms found"}
                         </p>
