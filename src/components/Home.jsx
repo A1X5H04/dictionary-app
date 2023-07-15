@@ -25,7 +25,6 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
 
   return (
     <>
-      <header></header>
       <main className="home-main">
         <div className="logo">
           <img width="250" src="./Logo.svg" alt="book" />
@@ -50,7 +49,7 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
             }
           />
           <button className="btn-icon" onClick={handleSubmit}>
-            <i className="ri-search-line"></i>
+            <img width="20" src="./search.svg" alt="search" />
           </button>
         </div>
       </main>
