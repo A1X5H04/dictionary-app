@@ -27,7 +27,7 @@ function Result({ searchTerm, dicType, setShowResult }) {
             <div className="word-cont">
               <div className="word">
                 <h2>{item.word}</h2>
-                <p>{item.phonetics.map((phonetic) => phonetic.text)}</p>
+                <p>{item.phonetics.map((phonetic) => phonetic.text + ", ")}</p>
               </div>
               <div className="audio-cont">
                 <img src="./no-noise.svg" alt="speaker" onClick={playAudio} />
