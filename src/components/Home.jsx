@@ -26,31 +26,33 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
   return (
     <>
       <main className="home-main">
-        <div className="logo">
-          <img width="250" src="./Logo.svg" alt="book" />
-        </div>
-        <div className="searchbar">
-          <button className="btn-dictype" onClick={toggleDicType}>
-            {dicType}
-          </button>
-          <div className="divider"></div>
-          <input
-            type="text"
-            id="search-input"
-            value={searchTerm}
-            onChange={handleChange}
-            onKeyDown={dicType === "classic" ? handleKeyDown : undefined}
-            name="search"
-            autoComplete="off"
-            placeholder={
-              dicType === "classic"
-                ? "What are you looking for?"
-                : "Wachu lookin' for?"
-            }
-          />
-          <button className="btn-icon" onClick={handleSubmit}>
-            <img width="20" src="./search.svg" alt="search" />
-          </button>
+        <div className="home">
+          <div className="logo">
+            <h1>Dictionary.</h1>
+          </div>
+          <div className="searchbar">
+            <button className="btn-dictype" onClick={toggleDicType}>
+              {dicType}
+            </button>
+            <div className="divider"></div>
+            <input
+              type="text"
+              id="search-input"
+              value={searchTerm}
+              onChange={handleChange}
+              onKeyDown={dicType === "classic" ? handleKeyDown : undefined}
+              name="search"
+              autoComplete="off"
+              placeholder={
+                dicType === "classic"
+                  ? "What are you looking for?"
+                  : "Wachu lookin' for?"
+              }
+            />
+            <button className="btn-icon" onClick={handleSubmit}>
+              <img width="20" src="./search.svg" alt="search" />
+            </button>
+          </div>
         </div>
       </main>
     </>
