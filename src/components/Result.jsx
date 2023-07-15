@@ -23,9 +23,9 @@ function Result({ searchTerm, dicType, setShowResult }) {
       }
       return (
         <>
-          <header>
+          <header className="header classic">
             <div className="word-cont">
-              <div className="word">
+              <div className="word word-classic">
                 <h2>{item.word}</h2>
                 <p>{item.phonetics.map((phonetic) => phonetic.text + ", ")}</p>
               </div>
@@ -83,11 +83,55 @@ function Result({ searchTerm, dicType, setShowResult }) {
       );
     });
   } else {
-    resultScreen = JSON.stringify(result);
+    resultScreen = result.map((item) => {
+      return (
+        <>
+          <div className="meanings-cont">
+            <div className="meanings">
+              <aside className="author-cont">
+                <div className="author">
+                  <h3 className="name truncate">{item.author}</h3>
+                  <p className="data">{item.written_on}</p>
+                </div>
+              </aside>
+              <div className="def_cont">
+                <div className="def-cont">
+                  <h3 className="definition">{item.definition}</h3>
+                  <p className="example">{item.example}</p>
+                </div>
+                <div className="def-bottom-div">
+                  <div className="src-link_cont">
+                    <a href={item.permalink}>Source</a>
+                    <img src="./left-arrow.svg" alt="left-arrow" />
+                  </div>
+                  <div className="thumbs-cont">
+                    <div className="thumbs-up">
+                      <img src="./like.svg" alt="thumbs-up" />
+                      <p>{item.thumbs_up}</p>
+                    </div>
+                    <div className="thumbs-down">
+                      <img src="./dislike.svg" alt="thumbs-down" />
+                      <p>{item.thumbs_down}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      );
+    });
   }
 
   return (
     <main className="result-main">
+      {dicType === "urban" && (
+        <header className="header urban-header">
+          <div className="word word-urban">
+            <h2>Aesthetic</h2>
+          </div>
+        </header>
+      )}
       <div>{resultScreen}</div>
     </main>
   );
