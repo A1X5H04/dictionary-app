@@ -128,7 +128,7 @@ function Result({ searchTerm, dicType, setShowResult }) {
       {dicType === "urban" && (
         <header className="header urban-header">
           <div className="word word-urban">
-            <h2>Aesthetic</h2>
+            <h2>{searchTerm}</h2>
           </div>
         </header>
       )}
