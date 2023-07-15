@@ -30,7 +30,7 @@ function Result({ searchTerm, dicType, setShowResult }) {
                 <p>{item.phonetics.map((phonetic) => phonetic.text + ", ")}</p>
               </div>
               <div className="audio-cont">
-                <img src="./no-noise.svg" alt="speaker" onClick={playAudio} />
+                <img src="./speaker.svg" alt="speaker" onClick={playAudio} />
               </div>
             </div>
           </header>
@@ -125,6 +125,32 @@ function Result({ searchTerm, dicType, setShowResult }) {
 
   return (
     <main className="result-main">
+      <div className="result-top-cont">
+        <button
+          className="btn-icon r_btn-icon"
+          onClick={() => setShowResult(false)}
+        >
+          <img src="./right-arrow.svg" alt="left-arrow" title="Back to Home" />
+        </button>
+        <div className="result-searchbar">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Search Something"
+            autoComplete="off"
+          />
+        </div>
+        <button
+          className="btn-icon r_btn-icon"
+          onClick={() => setShowResult(false)}
+        >
+          <img
+            src="./toggle.svg"
+            alt="left-arrow"
+            title="Toggle Dictionary mode"
+          />
+        </button>
+      </div>
       {dicType === "urban" && (
         <header className="header urban-header">
           <div className="word word-urban">
