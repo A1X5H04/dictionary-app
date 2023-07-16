@@ -3,7 +3,7 @@ export async function getUrbanDictionary(word) {
     const options = {
     	method: 'GET',
     	headers: {
-    		'X-RapidAPI-Key': import.meta.env.VITE_APP_URBAN_API_KEY,
+    		'X-RapidAPI-Key': import.meta.env.VITE_RAPID_API_KEY,
     		'X-RapidAPI-Host': 'mashape-community-urban-dictionary.p.rapidapi.com'
     	}
     };
@@ -15,6 +15,7 @@ export async function getUrbanDictionary(word) {
     	throw new Error('There was an error' + error);
     }
 }
+
 
 export async function getSimpleDictonary(word) {
     const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/' + word;
