@@ -1,14 +1,23 @@
 import React from "react";
 import { getSimpleDictonary, getUrbanDictionary } from "../api";
+import LoadingState from "./Loading";
 
 function Result({ searchTerm, dicType, setShowResult }) {
   const [result, setResult] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
+  
 
   React.useEffect(() => {
     if (dicType === "classic") {
-      getSimpleDictonary(searchTerm).then((data) => setResult(data));
+      getSimpleDictonary(searchTerm).then((data) => {
+        setResult(data)
+        setLoading(false)
+      });
     } else {
-      getUrbanDictionary(searchTerm).then((data) => setResult(data));
+      getUrbanDictionary(searchTerm).then((data) => {
+        setResult(data)
+        setLoading(false)
+      });
     }
   }, []);
   console.log(result);
@@ -158,7 +167,7 @@ function Result({ searchTerm, dicType, setShowResult }) {
           </div>
         </header>
       )}
-      <div>{resultScreen}</div>
+      <div className="result-scr">{loading ? <LoadingState /> : resultScreen}</div>
     </main>
   );
 }
