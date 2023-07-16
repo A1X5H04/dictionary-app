@@ -27,11 +27,40 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
     <>
       <main className="home-main">
         <header>
-          <h4 className="marquee-text">Source code on Github | If you like the project star on github</h4>
+          <div className="wordmark">
+            <h3>Dictionary.</h3>
+          </div>
+          <div className="social-icons">
+          <a href="https://github.com/a1x5h04">
+              Github
+            </a>
+            <a href="https://github.com/a1x5h04">
+              Github
+            </a>
+            <a href="https://github.com/a1x5h04">
+              Github
+            </a>
+          </div>
         </header>
+        <div className=" fl-div bl" style={{textAlign: "left"}}>
+          <p>Classic Dictionary is a simple dictionary used for looking simple words</p>
+        </div>
+
+        <div className="fl-div tr" style={{textAlign: "right"}}>
+          <p>
+            Urban Dictionary is a crowdsourced online dictionary for slang words
+          and phrases, operating under the motto "Define Your World."</p>
+        </div>
+
+        <div className="fl-div br">
+        </div>
+
+        <div className="fl-div tl">
+        </div>
+        
         <div className="search">
           <div className="logo">
-            <h1>Dictionary.</h1>
+            <img src="./logo.svg" alt="Logo" />
           </div>
           <div className="searchbar">
             <button className="btn-dictype" onClick={toggleDicType}>
@@ -58,19 +87,7 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
           </div>
         </div>
         <footer>
-          <div className="social-icons">
-            <div className="marquee-text">
-            <a href="https://github.com/a1x5h04">
-              Github
-            </a>
-            <a href="https://github.com/a1x5h04">
-              Telegram
-            </a>
-            <a href="https://github.com/a1x5h04">
-              Discord
-            </a>
-            </div>
-          </div>
+
         </footer>
       </main>
     </>
