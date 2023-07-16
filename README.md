@@ -4,6 +4,7 @@ This is a dictionary app built with React that allows users to search for defini
 
 ## Features
 
+- Clean And Aesthetic UI**
 - Search for definitions in Classic mode using a simple API
 - Search for definitions in Urban mode using the Urban Dictionary API
 - View user-generated content in Urban mode
