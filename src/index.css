@@ -20,18 +20,15 @@ body {
   place-items: center;
   min-width: 320px;
   height: 100%;
-  background-color: #ffffff;
-  background-image: radial-gradient(
-      at 13% 93%,
-      hsla(342, 77%, 62%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 33% 64%, hsla(202, 98%, 76%, 1) 0px, transparent 50%),
-    radial-gradient(at 53% 97%, hsla(223, 60%, 65%, 1) 0px, transparent 50%),
-    radial-gradient(at 40% 67%, hsla(42, 80%, 67%, 1) 0px, transparent 50%),
-    radial-gradient(at 87% 98%, hsla(204, 65%, 79%, 1) 0px, transparent 50%),
-    radial-gradient(at 81% 91%, hsla(61, 97%, 66%, 1) 0px, transparent 50%),
-    radial-gradient(at 20% 8%, hsla(247, 91%, 73%, 1) 0px, transparent 50%);
+  background-color:hsla(338,0%,100%,1);
+background-image:
+radial-gradient(at 82% 10%, hsla(32,62%,64%,1) 0px, transparent 50%),
+radial-gradient(at 7% 47%, hsla(277,67%,61%,1) 0px, transparent 50%),
+radial-gradient(at 48% 33%, hsla(155,86%,62%,1) 0px, transparent 50%),
+radial-gradient(at 10% 35%, hsla(134,96%,61%,1) 0px, transparent 50%),
+radial-gradient(at 41% 61%, hsla(180,81%,66%,1) 0px, transparent 50%),
+radial-gradient(at 4% 38%, hsla(84,69%,73%,1) 0px, transparent 50%),
+radial-gradient(at 55% 86%, hsla(19,81%,73%,1) 0px, transparent 50%);
 }
 
 #root {
@@ -39,6 +36,13 @@ body {
   max-width: 960px;
   border-inline: 1px solid black;
 }
+
+a {
+  font-weight: 500;
+  color: black;
+  text-decoration: inherit;
+}
+
 
 .home-main {
   position: relative;
@@ -50,19 +54,15 @@ body {
   overflow: hidden;
 }
 
-
-.marquee-text {
-  color: white;
-  height: 100%;
-  animation: horizontal-scroll 20s linear infinite;
-  transform:translateX(50%);
-}
-
 .home-main > header {
   position: absolute;
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  background-color: black;
+  padding: 10px;
+  border-bottom: 1px solid black;
 }
 
 .home-main > header > h4 {
@@ -79,10 +79,14 @@ body {
   border-top: 1px solid black;
 }
 
+.social-icons {
+  padding: 0;
+  margin: 0;
+}
+
 .social-icons > a {
+  padding-inline: 1em;
   border-left: 1px solid black;
-  padding: 0 1em;
-  text-align: center;
 }
 
 .home {
@@ -90,17 +94,57 @@ body {
   padding: 2em 0;
 }
 
-.logo {
-  width: fit-content;
-  padding: 0.3em 1em;
-  margin: 0 auto;
-  margin-bottom: 3em;
+.wordmark {
+  padding-inline: 1em;
+  border-right: 1px solid black;
 }
 
-.logo > h1 {
-  font-size: 2.5em;
+.wordmark > h3 {
   line-height: 0;
   font-family: "Limelight", cursive;
+}
+
+.search {
+  width: 100%;
+  max-width: 640px;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.logo > img {
+  margin: 0 auto;
+}
+
+.fl-div {
+  position: absolute;
+  width: 250px;
+  font-weight: 500;
+  padding: 10px 20px;
+}
+
+.bl {
+  bottom: 0;
+  left: 0;
+}
+
+.tr {
+  top: 75px;
+  right: 0;
+}
+
+.br {
+  bottom: 0;
+  right: 0;
+}
+
+.tl {
+  top: 75px;
+  left: 0;
 }
 
 .searchbar {
@@ -401,14 +445,12 @@ h1 {
   width: 120px;
 }
 
-a {
-  font-weight: 500;
-  color: black;
+
+.src-link_cont > a {
   margin-right: 20px;
-  text-decoration: inherit;
 }
 
-a:hover + img {
+.src-link_cont > a:hover + img {
   transition: 0.25s;
   transform: translateX(5px);
 }
