@@ -26,7 +26,10 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
   return (
     <>
       <main className="home-main">
-        <div className="home">
+        <header>
+          <h4 className="marquee-text">Source code on Github | If you like the project star on github</h4>
+        </header>
+        <div className="search">
           <div className="logo">
             <h1>Dictionary.</h1>
           </div>
@@ -54,6 +57,21 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
             </button>
           </div>
         </div>
+        <footer>
+          <div className="social-icons">
+            <div className="marquee-text">
+            <a href="https://github.com/a1x5h04">
+              Github
+            </a>
+            <a href="https://github.com/a1x5h04">
+              Telegram
+            </a>
+            <a href="https://github.com/a1x5h04">
+              Discord
+            </a>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   );
