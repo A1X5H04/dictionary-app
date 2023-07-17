@@ -110,14 +110,24 @@ a {
 }
 
 .logo {
+  position: relative;
   display: grid;
   place-items: center;
   width: 100%;
   margin-bottom: 2em;
 }
 
-.logo > img {
+.logo-img {
+  position: relative;
   margin: 0 auto;
+  user-select: none;
+}
+
+#star-grp {
+  position: absolute;
+  top: -3em;
+  right: -3em;
+  width: 3em;
 }
 
 .fl-div {
