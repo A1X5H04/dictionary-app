@@ -27,7 +27,7 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
     <>
       <main className="home-main">
         <header>
-          <div className="wordmark">
+         <div className="wordmark">
             <h3>Dictionary.</h3>
           </div>
           <div className="social-icons">
@@ -43,7 +43,8 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
           </div>
         </header>
         <div className=" fl-div bl" style={{textAlign: "left"}}>
-          <p>Classic Dictionary is a simple dictionary used for looking simple words</p>
+          <p>
+A classic dictionary is a reference tool that provides information about words, including their definitions, pronunciations, and usage. </p>
         </div>
 
         <div className="fl-div tr" style={{textAlign: "right"}}>
@@ -53,14 +54,20 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
         </div>
 
         <div className="fl-div br">
+          <img src="./shape.svg" alt="shape" width={25} />
         </div>
 
         <div className="fl-div tl">
+          <img src="./shape.svg" alt="shape" width={25} style={{transform: "rotate(180deg)"}} />
         </div>
         
         <div className="search">
           <div className="logo">
-            <img src="./logo.svg" alt="Logo" />
+            <div className="logo-img">
+            <img id="dic-img" src="./logo.svg" alt="Logo" />
+            <img id="star-grp" src="./stars.svg" alt="Stars" />
+            </div>
+            
           </div>
           <div className="searchbar">
             <button className="btn-dictype" onClick={toggleDicType}>
