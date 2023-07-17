@@ -24,24 +24,24 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
   }
 
   return (
-    <>
-      <main className="home-main">
-        <header>
-         <div className="wordmark">
-            <h3>Dictionary.</h3>
-          </div>
-          <div className="social-icons">
-          <a href="https://github.com/a1x5h04">
-              Github
-            </a>
-            <a href="https://github.com/a1x5h04">
-              Github
-            </a>
-            <a href="https://github.com/a1x5h04">
-              Github
-            </a>
-          </div>
-        </header>
+    <div className="home">        <header>
+    <div className="wordmark">
+       <h3>Dictionary.</h3>
+     </div>
+     <div className="social-icons">
+     <a href="https://github.com/a1x5h04">
+         Github
+       </a>
+       <a href="https://github.com/a1x5h04">
+         Github
+       </a>
+       <a href="https://github.com/a1x5h04">
+         Github
+       </a>
+     </div>
+   </header>
+      <main>
+
         <div className=" fl-div bl" style={{textAlign: "left"}}>
           <p>
 A classic dictionary is a reference tool that provides information about words, including their definitions, pronunciations, and usage. </p>
@@ -54,11 +54,9 @@ A classic dictionary is a reference tool that provides information about words, 
         </div>
 
         <div className="fl-div br">
-          <img src="./shape.svg" alt="shape" width={25} />
         </div>
 
         <div className="fl-div tl">
-          <img src="./shape.svg" alt="shape" width={25} style={{transform: "rotate(180deg)"}} />
         </div>
         
         <div className="search">
@@ -93,10 +91,11 @@ A classic dictionary is a reference tool that provides information about words, 
             </button>
           </div>
         </div>
-        <footer>
-
-        </footer>
+      
       </main>
-    </>
+      <footer>
+
+</footer>
+    </div>
   );
 }
