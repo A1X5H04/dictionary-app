@@ -2,6 +2,12 @@
 
 This is a dictionary app built with React that allows users to search for definitions in two modes: Classic and Urban.
 
+## Screenshot 
+
+[HomePage](https://cdn.discordapp.com/attachments/919153471691849769/1131184138372788244/image.png)
+[UrbanResult](https://cdn.discordapp.com/attachments/919153471691849769/1131184138691563570/image.png)
+[ClassicResult](https://cdn.discordapp.com/attachments/919153471691849769/1131184139178082405/image.png)
+
 ## Features
 
 - Clean And Aesthetic UI**
