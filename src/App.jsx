@@ -4,7 +4,7 @@ import Home from "./components/Home";
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState("");
-  const [dicType, setDicType] = React.useState("classic");
+  const [dicType, setDicType] = React.useState("urban");
   const [showResult, setShowResult] = React.useState(false);
 
   return showResult ? (
