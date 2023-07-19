@@ -32,11 +32,11 @@ export default function Home({ searchTermState, dicTypeState, setShowResult }) {
      <a href="https://github.com/a1x5h04">
          Github
        </a>
-       <a href="https://github.com/a1x5h04">
-         Github
+       <a href="mailto:alishbaig2004@gmail.com">
+         Email
        </a>
-       <a href="https://github.com/a1x5h04">
-         Github
+       <a href="https://a1x5h04.github.io">
+         Portfolio
        </a>
      </div>
    </header>
@@ -54,9 +54,15 @@ A classic dictionary is a reference tool that provides information about words, 
         </div>
 
         <div className="fl-div br">
+          <img src="./shape.svg" alt="Shape" />
+          <span></span>
+          <img src="./shape_2.svg" alt="Shape" />
         </div>
 
         <div className="fl-div tl">
+          <img src="./shape.svg" alt="Shape" />
+          <span></span>
+          <img src="./shape_2.svg" alt="Shape" />
         </div>
         
         <div className="search">

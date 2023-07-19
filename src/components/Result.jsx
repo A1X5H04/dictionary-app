@@ -5,27 +5,40 @@ import LoadingState from "./Loading";
 function Result({ searchTerm, dicType, setShowResult }) {
   const [result, setResult] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState(null);
   
 
   React.useEffect(() => {
     if (dicType === "classic") {
-      getSimpleDictonary(searchTerm).then((data) => {
+      getSimpleDictonary(searchTerm)
+      .then((data) => {
         setResult(data)
         setLoading(false)
-      });
+      })
+      .catch((err) => {
+        setError(err)
+        setLoading(false);
+      })
     } else {
-      getUrbanDictionary(searchTerm).then((data) => {
+      getUrbanDictionary(searchTerm)
+      .then((data) => {
         setResult(data)
         setLoading(false)
-      });
+      })
+      .catch((err) => {
+        setError(err)
+        setLoading(false);
+      })
     }
   }, []);
   console.log(result);
 
   let resultScreen;
 
-  if (dicType === "classic") {
-    resultScreen = result.map((item) => {
+  if (dicType === "classic")  {
+    if(!typeof result === "object") {
+
+    resultScreen =  result.map((item) => {
       function playAudio() {
         const audio = new Audio(item.phonetics[0].audio);
         audio.play();
@@ -91,7 +104,13 @@ function Result({ searchTerm, dicType, setShowResult }) {
         </>
       );
     });
+    } else {
+      resultScreen = <div className="error">No results found</div>
+    }
   } else {
+    if(result.length <= 0) {
+      resultScreen = <div className="error">No results found</div>
+    } else {
     resultScreen = result.map((item) => {
       return (
         <>
@@ -131,6 +150,7 @@ function Result({ searchTerm, dicType, setShowResult }) {
       );
     });
   }
+  }
 
   return (
     <main className="result-main">
@@ -167,7 +187,8 @@ function Result({ searchTerm, dicType, setShowResult }) {
           </div>
         </header>
       )}
-      <div className="result-scr">{loading ? <LoadingState /> : resultScreen}</div>
+      {error ? <div className="error">{error}</div> : <div className="result-scr">{loading ? <LoadingState /> : resultScreen}</div>}
+      
     </main>
   );
 }
